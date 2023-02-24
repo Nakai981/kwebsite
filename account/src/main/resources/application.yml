@@ -1,0 +1,17 @@
+#Config mysql
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://192.168.1.16:3333/k8s?createDatabaseIfNotExist=true
+    username: root
+    password:
+    hikari:
+      pool-name: Hikari
+      auto-commit: false
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+
+#
